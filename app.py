@@ -112,7 +112,7 @@ if not os.path.exists('users.db'):
     create_db()
 
 # Streamlit UI
-st.title("Steganography and Image Encryption App")
+st.title("🛡️🖥️Steganography and Image Encryption App")
 
 # User authentication
 if 'logged_in' not in st.session_state:
@@ -125,7 +125,7 @@ if not st.session_state.logged_in:
     
     if st.button("Register"):
         if register_user(username, password):
-            st.success(" User  registered successfully!")
+            st.success("User  registered successfully!")
         else:
             st.error("Username already exists.")
     
@@ -138,9 +138,14 @@ if not st.session_state.logged_in:
 else:
     # Navigation
     st.sidebar.title("Navigation")
-    page = st.sidebar.radio("Go to", ("Encrypt Text", "Decrypt Text", "Encrypt Image", "Decrypt Image"))
+    page = st.sidebar.selectbox("Go to", ("Encrypt Text", "Decrypt Text", "Encrypt Image", "Decrypt Image", "About", "Logout"))
 
-    if page == "Encrypt Text":
+    if page == "Logout":
+        st.session_state.logged_in = False
+        st.success("Logged out successfully!")
+        # No need to rerun, the UI will automatically show the login/register UI
+
+    elif page == "Encrypt Text":
         st.subheader("Encrypt Text into Image")
 
         # Upload image
@@ -199,6 +204,7 @@ else:
                     st.error("Incorrect decryption password!")
             else:
                 st.error("Please upload an image and ensure you have encrypted text available.")
+    
     elif page == "Encrypt Image":
         st.subheader("Encrypt Image Using XOR")
         
@@ -242,3 +248,58 @@ else:
                 filename = f"decrypted_image_{timestamp}.png"
                 save_image(decrypted_image, filename)
                 st.success(f"Decrypted image saved as 'encrypt/{filename}'")
+
+    elif page == "About":
+        st.subheader("About This App 🛡️🖥️")
+
+        st.markdown("""
+        Welcome to the **Steganography and Image Encryption App**! This is a powerful tool that allows you to hide text within images and encrypt images using XOR encryption. It provides an intuitive interface for both beginners and advanced users to use modern encryption techniques effectively.
+
+        ### 🔐 Features:
+        - **Encrypt Text into Image**: Hide text inside an image (Steganography) such that it remains invisible to the human eye.
+        - **Decrypt Text from Image**: Retrieve the hidden text from an image that was encrypted.
+        - **Encrypt Image with XOR**: Securely encrypt an image with a simple XOR encryption technique using a key.
+        - **Decrypt Image with XOR**: Decrypt the encrypted image by providing the correct key.
+
+        ### 🌟 Why You Should Use This App?
+        - **Privacy**: Protect your sensitive messages by hiding them inside images.
+        - **Security**: Encrypt images to keep them safe from unauthorized access.
+        - **User-Friendly**: Simple interface that makes encryption and decryption accessible to everyone.
+        - **Visual Steganography**: A cool way to hide information in plain sight without raising suspicion.
+
+        ### 📜 How to Use the App:
+        
+        1. **Encrypt Text into Image**:
+            - Upload any image (PNG, JPG, JPEG).
+            - Enter the text you want to hide inside the image.
+            - Provide a password for encryption.
+            - The app will generate an image with the hidden message, which can only be decrypted using the correct password.
+
+        2. **Decrypt Text from Image**:
+            - Upload the encoded image with hidden text.
+            - Enter the password used for encryption.
+            - The app will extract and decrypt the hidden message, allowing you to view it.
+
+        3. **Encrypt Image with XOR**:
+            - Upload an image you want to encrypt.
+            - Choose a key (between 0 and 255) to encrypt the image.
+            - The encrypted image will be generated, which can only be decrypted using the same key.
+
+        4. **Decrypt Image with XOR**:
+            - Upload the encrypted image.
+            - Enter the key used for encryption.
+            - The app will decrypt the image and display the original image.
+
+        ### 🚀 Why Is This App Useful?
+        - **Increased Security**: Whether you're hiding a personal message or securing an image, encryption ensures your content is protected.
+        - **Simplicity**: You don’t need to be an expert to use this app. Just follow a few simple steps to encrypt and decrypt content.
+        - **Creativity**: Perfect for creating secret messages hidden within images that can only be revealed by the person with the correct key or password.
+        
+        ### 📱 Stay Connected:
+        - **[GitHub](https://github.com/Ronak1231)**: Explore my other projects and open-source contributions.
+        - **[LinkedIn](https://www.linkedin.com/in/ronak-bansal-715605253/)**: Connect with me for professional opportunities and collaborations.
+        - **[Email](mailto:ronakbansal12345@gmail.com)**: Get in touch for any questions, feedback, or collaborations.
+
+        ### 🤖 Enjoy Using the App!
+        Encrypt your messages, protect your content, and have fun exploring the world of Steganography and Image Encryption! If you encounter any issues or need further assistance, feel free to reach out to me through the contact links above.
+        """)
