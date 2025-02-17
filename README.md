@@ -33,7 +33,8 @@ streamlit run app.py
 
 ```
 steganography-encryption-app/
-│── encrypt/                   # Directory to store encrypted images
+│── encrypt/                   # Directory to store encrypted images for Text
+│── encrypted_files/           # Directory to store encrypted images for Image Encryption
 │── users.db                    # SQLite database for user authentication
 │── app.py                      # Main Streamlit app
 │── requirements.txt             # Python dependencies
@@ -56,6 +57,12 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for d
 
 - Developed using **Python**, **Streamlit**, **NumPy**, **SQLite**, and **PIL**.
 - Inspired by modern cryptographic techniques.
+
+## ✍️ Author
+
+Developed by [Ronak Bansal](https://github.com/Ronak1231)  
+🔗 LinkedIn: [Ronak Bansal](https://www.linkedin.com/in/ronak-bansal-715605253/)  
+📧 Email: ronakbansal12345@gmail.com
 
 ---
 
