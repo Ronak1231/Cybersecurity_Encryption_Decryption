@@ -290,11 +290,6 @@ else:
             - Enter the key used for encryption.
             - The app will decrypt the image and display the original image.
 
-        ### 🚀 Why Is This App Useful?
-        - **Increased Security**: Whether you're hiding a personal message or securing an image, encryption ensures your content is protected.
-        - **Simplicity**: You don’t need to be an expert to use this app. Just follow a few simple steps to encrypt and decrypt content.
-        - **Creativity**: Perfect for creating secret messages hidden within images that can only be revealed by the person with the correct key or password.
-        
         ### 📱 Stay Connected:
         - **[GitHub](https://github.com/Ronak1231)**: Explore my other projects and open-source contributions.
         - **[LinkedIn](https://www.linkedin.com/in/ronak-bansal-715605253/)**: Connect with me for professional opportunities and collaborations.
