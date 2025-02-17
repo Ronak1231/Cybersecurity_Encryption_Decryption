@@ -40,7 +40,6 @@ steganography-encryption-app/
 │── requirements.txt             # Python dependencies
 │── README.md                    # Project documentation
 │── LICENSE                      # Project license
-└── images/                      # Sample images (if needed)
 ```
 
 ## 📜 License
