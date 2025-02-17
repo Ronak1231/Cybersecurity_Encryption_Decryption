@@ -1,0 +1,8 @@
+opencv-python
+streamlit
+pandas
+
+pillow 
+numpy 
+cryptography 
+# sqlite3
