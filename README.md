@@ -65,4 +65,4 @@ Developed by [Ronak Bansal](https://github.com/Ronak1231)
 
 ---
 
-💙 **Happy Encrypting!**
+                                                                                            💙 **Happy Encrypting!**
