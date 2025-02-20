@@ -64,4 +64,4 @@ Developed by [Ronak Bansal](https://github.com/Ronak1231)
 📧 Email: ronakbansal12345@gmail.com
 
 ##
-## 💙 **Happy Encrypting!**
+💙 **Happy Encrypting!**
