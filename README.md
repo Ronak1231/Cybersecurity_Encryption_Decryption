@@ -1,4 +1,4 @@
-# 🛡️ Steganography & Image Encryption App
+# 🛡️ Lock & Layer: Image and Text Encryption Vault
 
 A secure and easy-to-use **Steganography and Image Encryption App** built with **Streamlit, Python, and SQLite**. 
 This app enables users to **hide text in images, encrypt/decrypt images using XOR**, and manage **user authentication securely**.
