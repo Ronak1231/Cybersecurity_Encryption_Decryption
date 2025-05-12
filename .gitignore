@@ -1,0 +1,22 @@
+# Virtual Environment
+venv/
+.venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# macOS & Windows system files
+.DS_Store
+Thumbs.db
+
+# Vercel build outputs (if any)
+.vercel/
